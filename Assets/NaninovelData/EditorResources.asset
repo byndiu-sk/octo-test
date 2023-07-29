@@ -171,3 +171,31 @@ MonoBehaviour:
     - name: NameChoosing
       pathPrefix: Scripts
       guid: d9de1b07aed5d034ca88774135071bcb
+    - name: Map
+      pathPrefix: Scripts
+      guid: f1c8d480a7ff30d49b0d1d14af99c269
+    - name: Loc1
+      pathPrefix: Scripts
+      guid: 00b1fd4b49e1d3b42a7b42963c32e273
+    - name: Loc2
+      pathPrefix: Scripts
+      guid: f5f9ef87d6c99f84baa693a1abeae10b
+    - name: Main
+      pathPrefix: Scripts
+      guid: 880d8cbe20d6c8443a3aa9cd3b2421b2
+  - Id: Backgrounds/807a4875-3a42-4acc-990a-42a50933ff4c
+    Resources:
+    - name: bg1
+      pathPrefix: Backgrounds/MainBackground
+      guid: 766a594eedaec8846a30a18e532ce193
+    - name: bg2
+      pathPrefix: Backgrounds/MainBackground
+      guid: dc68765a7daf4034494c49612d6a704c
+    - name: bg3
+      pathPrefix: Backgrounds/MainBackground
+      guid: cc23b315f775d8541aa30042704019af
+    - name: map
+      pathPrefix: Backgrounds/MainBackground
+      guid: f7cc00a4bfc4abf4eaa57393773a4797
+  - Id: Characters/4693db2c-e01e-479c-ab50-86808f44acfa
+    Resources: []

@@ -1,0 +1,17 @@
+@back bg1
+@char player
+@char npc1
+
+player: 1
+npc1: 2
+
+player: 3
+npc1: 4
+
+player: 5
+npc1: quest giving
+
+@hide npc1
+
+@goto Loc2
+@stop

@@ -1,0 +1,28 @@
+@back bg1
+@char player
+@char npc1
+
+player: 1
+npc1: 2
+
+player: 3
+npc1: 4
+
+player: 5
+npc1: quest giving
+
+@hide npc1
+@hide player
+
+@back bg2
+@char player
+@char npc2
+player: q
+npc2: w
+
+player: e
+npc2: r
+
+player: t
+npc2: y
+@stop

@@ -1,0 +1,11 @@
+@back bg2
+@char npc2
+player: q
+npc2: w
+
+player: e
+npc2: r
+
+player: t
+npc2: y
+@stop
