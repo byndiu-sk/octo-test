@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 23
-  productGUID: 00000000000000000000000000000000
+  productGUID: ae902ba22f0e5cc4e8c36585b8aebf35
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -600,6 +600,7 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
+    Standalone: PUBLISHING_TOOLS_ASSET_STORE_RELEASE;MINIGAME_-_MEMORY_ASSET_STORE_RELEASE
     WebGL: PUBLISHING_TOOLS_ASSET_STORE_RELEASE;MINIGAME_-_MEMORY_ASSET_STORE_RELEASE
   additionalCompilerArguments: {}
   platformArchitecture: {}
