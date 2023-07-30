@@ -169,6 +169,9 @@ MonoBehaviour:
     - name: QuestLog
       pathPrefix: UI
       guid: fbb777301f747c34f89bb78ad20c4c03
+    - name: MapButton
+      pathPrefix: UI
+      guid: 08041c13a1f901947a6a67ba0cf2c658
   - Id: Scripts
     Resources:
     - name: NameChoosing
@@ -186,6 +189,9 @@ MonoBehaviour:
     - name: Main
       pathPrefix: Scripts
       guid: 880d8cbe20d6c8443a3aa9cd3b2421b2
+    - name: Loc3
+      pathPrefix: Scripts
+      guid: 4b8e50e6043be004eb4fe54c8448e5bc
   - Id: Backgrounds/807a4875-3a42-4acc-990a-42a50933ff4c
     Resources:
     - name: bg1

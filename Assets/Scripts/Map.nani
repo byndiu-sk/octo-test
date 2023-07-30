@@ -1,22 +1,23 @@
-#Map
-@back map
+# Map
 @hidePrinter
+@hideChars
+@back map
 
-@choice handler:ButtonArea button:MapButtons/btn1 pos:-300,-300 goto:.bg1
-@choice handler:ButtonArea button:MapButtons/btn2 pos:0,0 goto:.bg2
-@choice handler:ButtonArea button:MapButtons/btn3 pos:300,200 goto:.bg3
+@choice  button:MapButtons/btn1 pos:-300,-300 handler:ButtonArea goto:Loc1.Loc1
+@choice  button:MapButtons/btn2 pos:0,0 handler:ButtonArea goto:Loc2.Loc2
+@choice  button:MapButtons/btn3 pos:300,200 handler:ButtonArea goto:Loc3.Loc3
 @stop
 
-#bg1
+# bg1
 @back bg1
 @wait 2
 @goto .Map
-#bg2
+# bg2
 @back bg2
 @wait 2
 @goto .Map
-#bg3
+# bg3
 @back bg3
 @wait 2
 @goto .Map
-@stop   
+@stop

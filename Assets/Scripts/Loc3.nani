@@ -1,0 +1,16 @@
+#Loc3
+
+@back bg3
+@char player
+
+player: flow3 item
+npc2: flow3 item
+
+player: flow3 item
+npc2: flow3 item
+
+@set questProgress++
+;Quest progress equal to 3
+
+@choice handler:ButtonArea button:MapButtons/MapButton pos:0,0 goto:Map.Map
+@stop

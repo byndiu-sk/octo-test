@@ -1,11 +1,46 @@
+# Loc2
+
 @back bg2
 @char npc2
-player: q
-npc2: w
 
-player: e
-npc2: r
+@if questProgress=1
+player: flow2
+npc2: flow2
 
-player: t
-npc2: y
+player: flow2
+npc2: flow2
+
+@set questProgress++
+;Quest progress equal to 2
+@choice  button:MapButtons/MapButton pos:0,0 handler:ButtonArea goto:Map.Map
+@endIf
+
+@if questProgress=3
+player: flow4 solo
+npc2: flow4 solo
+
+player: flow4 solo
+npc2: flow4 solo
+
+@set questProgress++
+;Quest progress equal to 4
+@choice  button:MapButtons/MapButton pos:0,0 handler:ButtonArea goto:Map.Map
+@endIf
+
+
+@if questProgress=5
+@back bg1
+@char player
+@char npc1
+
+player: end npc2 flow
+npc1: end npc2 flow
+
+player: end npc2 flow
+npc1: end npc2 flow
+
+@choice handler:ButtonArea button:MapButtons/MapButton pos:0,0 goto:Map.Map
+@endIf
+
+
 @stop

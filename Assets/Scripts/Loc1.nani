@@ -1,17 +1,57 @@
+#Loc1
+
+;Quest progress equal to 0
+
+@if questProgress=0
 @back bg1
 @char player
 @char npc1
 
-player: 1
-npc1: 2
+player: flow1
+npc1: flow1
 
-player: 3
-npc1: 4
+player: flow1
+npc1: flow1
 
-player: 5
-npc1: quest giving
+@set questProgress++
+;Quest progress equal to 1
 
-@hide npc1
+@choice handler:ButtonArea button:MapButtons/MapButton pos:0,0 goto:Map.Map
 
-@goto Loc2
+@stop
+@endIf
+
+
+@if questProgress=4
+@back bg1
+@char player
+@char npc1
+
+player: item choice
+npc1: item choice
+
+player: item choice
+npc1: item choice
+
+@set questProgress++
+;Quest progress equal to 5
+
+@choice handler:ButtonArea button:MapButtons/MapButton pos:0,0 goto:Map.Map
+@endIf
+
+
+@if questProgress=5
+@back bg1
+@char player
+@char npc1
+
+player: end npc1 flow
+npc1: end npc1 flow
+
+player: end npc1 flow
+npc1: end npc1 flow
+
+@choice handler:ButtonArea button:MapButtons/MapButton pos:0,0 goto:Map.Map
+@endIf
+
 @stop
