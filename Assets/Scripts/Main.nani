@@ -12,6 +12,8 @@ player: 5
 npc1: quest giving
 @showUI QuestLog
 @set status="Квест виданий"
+@memoryGame
+
 
 @hide npc1
 @hide player

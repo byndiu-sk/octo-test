@@ -5,6 +5,7 @@ using System;
 using DTT.MinigameBase;
 using DTT.MinigameBase.Timer;
 using DTT.MinigameBase.UI;
+using System.Linq;
 
 namespace DTT.MinigameMemory
 {
@@ -13,6 +14,10 @@ namespace DTT.MinigameMemory
     /// </summary>
     public class MemoryGameManager : MonoBehaviour, IMinigame<MemoryGameSettings, MemoryGameResults>
     {
+        [SerializeField]
+        List<GameObject> children;
+        [SerializeField]
+        MemoryGameSettings settings;
         /// <summary>
         /// Is called when the game has started.
         /// </summary>
@@ -82,6 +87,7 @@ namespace DTT.MinigameMemory
         /// <param name="settings">The settings used for this play session.</param>
         public void StartGame(MemoryGameSettings settings)
         {
+            children.ForEach(x => x.SetActive(true));
             _settings = settings;
             _amountOfTurns = 0;
             _isPaused = false;
@@ -90,6 +96,23 @@ namespace DTT.MinigameMemory
 
             _board.SetupGame(_settings);
             Started?.Invoke();
+        }
+        public void StartGame()
+        {
+            children.ForEach(x => x.SetActive(true));
+            _settings = settings;
+            _amountOfTurns = 0;
+            _isPaused = false;
+            _isGameActive = true;
+            _timer.Begin();
+
+            _board.SetupGame(_settings);
+            Started?.Invoke();
+        }
+
+        private void Start()
+        {
+            StartGame(settings);
         }
 
         /// <summary>
@@ -130,6 +153,7 @@ namespace DTT.MinigameMemory
         {
             _timer.Stop();
             _isGameActive = false;
+            children.ForEach(x => x.SetActive(false));
             Finish?.Invoke(new MemoryGameResults(_timer.TimePassed, _amountOfTurns));
         }
 
@@ -145,6 +169,7 @@ namespace DTT.MinigameMemory
         {
             _board.CardsTurned += IncreaseTurnAmount;
             _board.AllCardsMatched += ForceFinish;
+            StartGame();
         }
 
         /// <summary>
