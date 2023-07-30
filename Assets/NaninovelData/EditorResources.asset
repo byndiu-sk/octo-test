@@ -208,3 +208,20 @@ MonoBehaviour:
       guid: f7cc00a4bfc4abf4eaa57393773a4797
   - Id: Characters/4693db2c-e01e-479c-ab50-86808f44acfa
     Resources: []
+  - Id: Characters/2e21f577-34f5-4127-96a4-178224322e21
+    Resources:
+    - name: default
+      pathPrefix: Characters/player
+      guid: 475a74199dc7d4b479b4f1a39561a816
+  - Id: Characters/1c46980e-3d27-4d92-9322-4f45f0d0c969
+    Resources:
+    - name: default
+      pathPrefix: Characters/npc1
+      guid: 37cce5f8dd09cf74fbb87737ab1d8db6
+  - Id: Characters/229eaf09-90c8-44ab-8fed-c3c4918fe684
+    Resources:
+    - name: default
+      pathPrefix: Characters/npc2
+      guid: 5587f22cdda153943a25c0c6ab878855
+  - Id: CharacterAvatars
+    Resources: []

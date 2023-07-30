@@ -7,14 +7,16 @@
 @char player
 @char npc1
 
-player: flow1
-npc1: flow1
-
-player: flow1
-npc1: flow1
+Npc1: Приветствую, новичок! Меня зовут Хироши, и я твой первый оппонент. Хочешь проверить свои силы в нашем файтинг-турнире?
+player: Конечно, я приму вызов!
+npc1: Отлично, давай начнем! Твоя первая цель - найти древний артефакт, способный усилить твою мощь. Поговори с Рино на Локации -2, он может помочь тебе узнать больше.
 
 @set questProgress++
 ;Quest progress equal to 1
+
+@showUI QuestLog
+@set status=questProgress
+
 
 @choice handler:ButtonArea button:MapButtons/MapButton pos:0,0 goto:Map.Map
 
@@ -27,14 +29,13 @@ npc1: flow1
 @char player
 @char npc1
 
-player: item choice
-npc1: item choice
-
-player: item choice
-npc1: item choice
+npc1: Приветствую, новичок! Меня зовут Хироши, и я твой первый оппонент. Хочешь проверить свои силы в нашем файтинг-турнире?
+player: Конечно, я приму вызов!
+npc1: Отлично, давай начнем! Твоя первая цель - найти древний артефакт, способный усилить твою мощь. Поговори с НПЦ-2 на Локации -2, он может помочь тебе узнать больше.
 
 @set questProgress++
 ;Quest progress equal to 5
+@set status=questProgress
 
 @choice handler:ButtonArea button:MapButtons/MapButton pos:0,0 goto:Map.Map
 @endIf

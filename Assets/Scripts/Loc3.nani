@@ -3,14 +3,15 @@
 @back bg3
 @char player
 
-player: flow3 item
-npc2: flow3 item
+@choice handler:ButtonArea button:ArtifactItem pos:0,0 goto:.ItemPickedUp
 
-player: flow3 item
-npc2: flow3 item
+#ItemPickedUp
+player: Я нашел артефакт. Круто!
+
 
 @set questProgress++
 ;Quest progress equal to 3
+@set status=questProgress
 
 @choice handler:ButtonArea button:MapButtons/MapButton pos:0,0 goto:Map.Map
 @stop

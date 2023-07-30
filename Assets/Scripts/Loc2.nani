@@ -4,14 +4,14 @@
 @char npc2
 
 @if questProgress=1
-player: flow2
-npc2: flow2
-
-player: flow2
-npc2: flow2
+npc2: Эй, новичок! Меня зовут Рино. Слышал, что ты принял вызов Хироши и ищешь древний артефакт? Это правда?
+player: Да, верно. Как я могу его найти?
+npc2: Вот это решительность! Я обнаружил, что артефакт находится на Локации - 3. Будь аккуратен, там много опасных противников. Возьми этот амулет, он поможет тебе в бою. После этого мы снова поговорим.
 
 @set questProgress++
 ;Quest progress equal to 2
+@set status=questProgress
+
 @choice  button:MapButtons/MapButton pos:0,0 handler:ButtonArea goto:Map.Map
 @endIf
 
@@ -24,6 +24,8 @@ npc2: flow4 solo
 
 @set questProgress++
 ;Quest progress equal to 4
+@set status=questProgress
+
 @choice  button:MapButtons/MapButton pos:0,0 handler:ButtonArea goto:Map.Map
 @endIf
 
