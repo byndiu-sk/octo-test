@@ -13,6 +13,7 @@ npc1: Отлично, давай начнем! Твоя первая цель - 
 
 @set questProgress++
 ;Quest progress equal to 1
+@set targetLoc=2
 
 @showUI QuestLog
 @set status=questProgress
@@ -36,7 +37,6 @@ npc1: Отлично, давай начнем! Твоя первая цель - 
 @set questProgress++
 ;Quest progress equal to 5
 @set status=questProgress
-
 @choice handler:ButtonArea button:MapButtons/MapButton pos:0,0 goto:Map.Map
 @endIf
 

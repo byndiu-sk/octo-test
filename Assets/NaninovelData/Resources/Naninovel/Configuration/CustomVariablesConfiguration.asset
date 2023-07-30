@@ -15,3 +15,5 @@ MonoBehaviour:
   PredefinedVariables:
   - name: questProgress
     value: 0
+  - name: targetLoc
+    value: Loc1

@@ -112,7 +112,7 @@ namespace DTT.MinigameMemory
 
         private void Start()
         {
-            StartGame(settings);
+            //StartGame(settings);
         }
 
         /// <summary>
