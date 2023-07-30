@@ -7,6 +7,7 @@ using DTT.MinigameBase.Timer;
 using DTT.MinigameBase.UI;
 using System.Linq;
 
+
 namespace DTT.MinigameMemory
 {
     /// <summary>
@@ -112,7 +113,7 @@ namespace DTT.MinigameMemory
 
         private void Start()
         {
-            //StartGame(settings);
+            StartGame(settings);
         }
 
         /// <summary>
@@ -169,7 +170,10 @@ namespace DTT.MinigameMemory
         {
             _board.CardsTurned += IncreaseTurnAmount;
             _board.AllCardsMatched += ForceFinish;
-            StartGame();
+
+            
+
+            //StartGame();
         }
 
         /// <summary>

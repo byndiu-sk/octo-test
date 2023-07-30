@@ -1,14 +1,19 @@
 #Loc1
 
 ;Quest progress equal to 0
+@back bg1
 
 @if questProgress=0
-@back bg1
+
+@input PlayerName summary:"Choose your name."
+; Stop command is required to halt script execution until user submits the input
+@stop
+
 @char player
 @char npc1
 
 Npc1: Приветствую, новичок! Меня зовут Хироши, и я твой первый оппонент. Хочешь проверить свои силы в нашем файтинг-турнире?
-player: Конечно, я приму вызов!
+{PlayerName}: Конечно, я приму вызов!
 npc1: Отлично, давай начнем! Твоя первая цель - найти древний артефакт, способный усилить твою мощь. Поговори с Рино на Локации -2, он может помочь тебе узнать больше.
 
 @set questProgress++
@@ -18,8 +23,8 @@ npc1: Отлично, давай начнем! Твоя первая цель - 
 @showUI QuestLog
 @set status=questProgress
 
-
-@choice handler:ButtonArea button:MapButtons/MapButton pos:0,0 goto:Map.Map
+@hidePrinter
+@choice handler:ButtonArea button:MapButtons/MapButton pos:800,-450 goto:Map.Map
 
 @stop
 @endIf
@@ -31,13 +36,13 @@ npc1: Отлично, давай начнем! Твоя первая цель - 
 @char npc1
 
 npc1: Приветствую, новичок! Меня зовут Хироши, и я твой первый оппонент. Хочешь проверить свои силы в нашем файтинг-турнире?
-player: Конечно, я приму вызов!
+{PlayerName}: Конечно, я приму вызов!
 npc1: Отлично, давай начнем! Твоя первая цель - найти древний артефакт, способный усилить твою мощь. Поговори с НПЦ-2 на Локации -2, он может помочь тебе узнать больше.
 
 @set questProgress++
 ;Quest progress equal to 5
 @set status=questProgress
-@choice handler:ButtonArea button:MapButtons/MapButton pos:0,0 goto:Map.Map
+@choice handler:ButtonArea button:MapButtons/MapButton pos:65,65 goto:Map.Map
 @endIf
 
 
@@ -46,10 +51,10 @@ npc1: Отлично, давай начнем! Твоя первая цель - 
 @char player
 @char npc1
 
-player: end npc1 flow
+{PlayerName}: end npc1 flow
 npc1: end npc1 flow
 
-player: end npc1 flow
+{PlayerName}: end npc1 flow
 npc1: end npc1 flow
 
 @choice handler:ButtonArea button:MapButtons/MapButton pos:0,0 goto:Map.Map

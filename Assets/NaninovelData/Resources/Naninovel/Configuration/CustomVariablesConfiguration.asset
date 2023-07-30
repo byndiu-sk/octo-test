@@ -17,3 +17,5 @@ MonoBehaviour:
     value: 0
   - name: targetLoc
     value: Loc1
+  - name: playerName
+    value: Player

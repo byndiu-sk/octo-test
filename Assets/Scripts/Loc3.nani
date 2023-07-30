@@ -4,9 +4,9 @@
 @char player
 
 @choice handler:ButtonArea button:ArtifactItem pos:0,0 goto:.ItemPickedUp
-
+@stop
 #ItemPickedUp
-player: Я нашел артефакт. Круто!
+{PlayerName}: Я нашел артефакт. Круто!
 
 
 @set questProgress++

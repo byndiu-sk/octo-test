@@ -1,26 +1,30 @@
 # Loc2
 
 @back bg2
-@char npc2
+@char player
 
 @if questProgress=1
+@char npc2
 npc2: Эй, новичок! Меня зовут Рино. Слышал, что ты принял вызов Хироши и ищешь древний артефакт? Это правда?
-player: Да, верно. Как я могу его найти?
+{PlayerName}: Да, верно. Как я могу его найти?
 npc2: Вот это решительность! Я обнаружил, что артефакт находится на Локации - 3. Будь аккуратен, там много опасных противников. Возьми этот амулет, он поможет тебе в бою. После этого мы снова поговорим.
+
+@memoryGame
+
+npc2: Нормально так!
 
 @set questProgress++
 ;Quest progress equal to 2
 @set status=questProgress
 
-@choice  button:MapButtons/MapButton pos:0,0 handler:ButtonArea goto:Map.Map
+@hidePrinter
+@choice  button:MapButtons/MapButton pos:65,65 handler:ButtonArea goto:Map.Map
 @endIf
 
 @if questProgress=3
-player: flow4 solo
-npc2: flow4 solo
 
-player: flow4 solo
-npc2: flow4 solo
+{PlayerName}: flow4 solo
+{PlayerName}: flow4 solo
 
 @set questProgress++
 ;Quest progress equal to 4
@@ -33,13 +37,13 @@ npc2: flow4 solo
 @if questProgress=5
 @back bg1
 @char player
-@char npc1
+@char npc2
 
-player: end npc2 flow
-npc1: end npc2 flow
+{PlayerName}: end npc2 flow
+npc2: end npc2 flow
 
-player: end npc2 flow
-npc1: end npc2 flow
+{PlayerName}: end npc2 flow
+npc2: end npc2 flow
 
 @choice handler:ButtonArea button:MapButtons/MapButton pos:0,0 goto:Map.Map
 @endIf
