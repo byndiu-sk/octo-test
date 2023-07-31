@@ -1,0 +1,7 @@
+; Russian <ru> to English <en> localization document for `NameChoosing` naninovel script
+
+# d24f413e
+; @input PlayerName summary:"Enter your name"
+
+# b7e26633
+; {PlayerName}: you can call me {PlayerName}

@@ -1,0 +1,40 @@
+; Russian <ru> to English <en> localization document for `Main` naninovel script
+
+# 86910fc7
+; @choice handler:ButtonArea button:MapButtons/MapButton pos:0,0 goto:Map.Map
+
+# f60b805a
+; player: 1
+
+# e4e049e9
+; npc1: 2
+
+# ec186331
+; player: 3
+
+# 11ece844
+; npc1: 4
+
+# e7fe834b
+; player: 5
+
+# 6dc2ec4a
+; npc1: quest giving
+
+# 13654a8c
+; player: q
+
+# 3e354344
+; npc2: w
+
+# ce387f55
+; player: e
+
+# 6ab5b5d6
+; npc2: r
+
+# 3a274cf3
+; player: t
+
+# 4ad4e1aa
+; npc2: y

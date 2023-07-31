@@ -1,63 +1,77 @@
-#Loc1
+# Loc1
 
-;Quest progress equal to 0
+; Quest progress equal to 0
 @back bg1
+@showUI QuestLog
 
 @if questProgress=0
 
-@input PlayerName summary:"Choose your name."
+@input PlayerName summary:"Выберите себе имя"
 ; Stop command is required to halt script execution until user submits the input
 @stop
 
 @char player
 @char npc1
 
-Npc1: Приветствую, новичок! Меня зовут Хироши, и я твой первый оппонент. Хочешь проверить свои силы в нашем файтинг-турнире?
-{PlayerName}: Конечно, я приму вызов!
-npc1: Отлично, давай начнем! Твоя первая цель - найти древний артефакт, способный усилить твою мощь. Поговори с Рино на Локации -2, он может помочь тебе узнать больше.
+npc1: Привет, {playerName}! У нас срочное задание. Великий артефакт, который держит мир в равновесии, был украден злодеями. Ты можешь помочь нам его найти и вернуть?"
+{PlayerName}: Конечно, я сделаю всё возможное, чтобы найти этот артефакт и вернуть его!
+; npc1: Отлично, давай начнем! Твоя первая цель - найти древний артефакт, способный усилить твою мощь. Поговори с Рино на Локации -2, он может помочь тебе узнать больше.
 
 @set questProgress++
-;Quest progress equal to 1
+; Quest progress equal to 1
 @set targetLoc=2
 
 @showUI QuestLog
-@set status=questProgress
+@set "status=\"Разузнать у {GetName("npc2")} об артефакте\""
 
-@hidePrinter
-@choice handler:ButtonArea button:MapButtons/MapButton pos:800,-450 goto:Map.Map
+; @hideUI QuestLog
+@hidePrinter 
+@choice  button:MapButtons/MapButton pos:800,-450 handler:ButtonArea goto:Map.Map
 
 @stop
 @endIf
-
 
 @if questProgress=4
 @back bg1
 @char player
 @char npc1
+@char npc2
 
-npc1: Приветствую, новичок! Меня зовут Хироши, и я твой первый оппонент. Хочешь проверить свои силы в нашем файтинг-турнире?
-{PlayerName}: Конечно, я приму вызов!
-npc1: Отлично, давай начнем! Твоя первая цель - найти древний артефакт, способный усилить твою мощь. Поговори с НПЦ-2 на Локации -2, он может помочь тебе узнать больше.
+{PlayerName}: Я вернулся!
+npc1: {playerName} ты нашёл артефакт?
+npc2: Эй, ты там! Покажи мне артефакт, который ты нашёл.
+
+@choice "Отдать артефакт {GetName("npc1")}" goto:.Choise1
+@choice "Отдать артефакт {GetName("npc2")}" goto:.Choise2
+@choice "Оставить себе" goto:.Choise3
+@stop
+
+# Choise1
+@set itemChoise=1
+
+# Choise2
+@set itemChoise=2
+
+# Choise3
+@set itemChoise=0
+
+@hideUI QuestLog
+@hide npc2
+@set targetLoc=0
 
 @set questProgress++
-;Quest progress equal to 5
-@set status=questProgress
-@choice handler:ButtonArea button:MapButtons/MapButton pos:65,65 goto:Map.Map
+; Quest progress equal to 5
+@if questProgress=5
+@if itemChoise=1
+@char npc1
+npc1: Ты мне нравишся
+@else
+npc1: "Ты мне противен"
+@set status=""
+@endIf
 @endIf
 
-
-@if questProgress=5
-@back bg1
-@char player
-@char npc1
-
-{PlayerName}: end npc1 flow
-npc1: end npc1 flow
-
-{PlayerName}: end npc1 flow
-npc1: end npc1 flow
-
-@choice handler:ButtonArea button:MapButtons/MapButton pos:0,0 goto:Map.Map
+@choice  button:MapButtons/MapButton pos:800,-450 handler:ButtonArea goto:Map.Map
 @endIf
 
 @stop

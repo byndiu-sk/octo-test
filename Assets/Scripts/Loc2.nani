@@ -2,51 +2,51 @@
 
 @back bg2
 @char player
+@showUI QuestLog
 
 @if questProgress=1
 @char npc2
-npc2: Эй, новичок! Меня зовут Рино. Слышал, что ты принял вызов Хироши и ищешь древний артефакт? Это правда?
-{PlayerName}: Да, верно. Как я могу его найти?
-npc2: Вот это решительность! Я обнаружил, что артефакт находится на Локации - 3. Будь аккуратен, там много опасных противников. Возьми этот амулет, он поможет тебе в бою. После этого мы снова поговорим.
-
+npc2: Добро пожаловать, {playerName}! Ты ищешь артефакт? Я слышал, что его последний раз видели в древних руинах на горе. Однако, руины опасны и похожи друг на друга. Ты сможешь запомнить пары символов, чтобы найти правильный путь?
+@set status="Пройти мини игру"
+{PlayerName}: Конечно, я готов принять вызов и найти артефакт!
 @memoryGame
 
-npc2: Нормально так!
+@set status="Направиться к артефакту"
+npc2: "Отлично, {playerName}! Ты хорошо справился. Теперь ты знаешь правильный путь к артефакту.
 
 @set questProgress++
+@set targetLoc=3
 ;Quest progress equal to 2
-@set status=questProgress
 
 @hidePrinter
-@choice  button:MapButtons/MapButton pos:65,65 handler:ButtonArea goto:Map.Map
+@choice handler:ButtonArea button:MapButtons/MapButton pos:800,-450 goto:Map.Map
 @endIf
 
 @if questProgress=3
 
-{PlayerName}: flow4 solo
-{PlayerName}: flow4 solo
+{PlayerName}: Я вернулся, и у меня есть артефакт!
+{PlayerName}: Кому следует отдать артефакт? {GetName("npc1")} или {GetName("npc2")}?
+
+
 
 @set questProgress++
+@set targetLoc=1
+
 ;Quest progress equal to 4
-@set status=questProgress
+@set status="Сделать выбор"
 
-@choice  button:MapButtons/MapButton pos:0,0 handler:ButtonArea goto:Map.Map
+@choice handler:ButtonArea button:MapButtons/MapButton pos:800,-450 goto:Map.Map
 @endIf
-
 
 @if questProgress=5
-@back bg1
-@char player
 @char npc2
-
-{PlayerName}: end npc2 flow
-npc2: end npc2 flow
-
-{PlayerName}: end npc2 flow
-npc2: end npc2 flow
-
-@choice handler:ButtonArea button:MapButtons/MapButton pos:0,0 goto:Map.Map
+@if itemChoise=2
+npc2: Ты мне нравишся
+@else
+npc2: "Ты мне противен"
+@set status=""
+@endIf
 @endIf
 
-
+@choice handler:ButtonArea button:MapButtons/MapButton pos:800,-450 goto:Map.Map
 @stop

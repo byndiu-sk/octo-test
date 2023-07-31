@@ -19,3 +19,5 @@ MonoBehaviour:
     value: Loc1
   - name: playerName
     value: Player
+  - name: itemChoise
+    value: 0

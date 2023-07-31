@@ -1,0 +1,31 @@
+; Russian <ru> to English <en> localization document for `Loc2` naninovel script
+
+# d4391814
+; npc2: ДДобро пожаловать, {playerName}! Ты ищешь артефакт? Я слышал, что его последний раз видели в древних руинах на горе. Однако, руины опасны и похожи друг на друга. Ты сможешь запомнить пары символов, чтобы найти правильный путь?
+
+# 4cf253c6
+; {PlayerName}: Конечно, я готов принять вызов и найти артефакт!
+
+# 337d114a
+; npc2: "Отлично, {playerName}! Ты хорошо справился. Теперь ты знаешь правильный путь к артефакту.
+
+# 90c134c2
+; @choice handler:ButtonArea button:MapButtons/MapButton pos:800,-450 goto:Map.Map
+
+# c85070c6
+; {PlayerName}: Я вернулся, и у меня есть артефакт!
+
+# 9f7977b9
+; {PlayerName}: Кому следует отдать артефакт? НПЦ-1 или НПЦ-2?
+
+# 90c134c2
+; @choice handler:ButtonArea button:MapButtons/MapButton pos:800,-450 goto:Map.Map
+
+# bd18fa4f
+; npc1: Ты мне нравишся
+
+# 13219c86
+; npc1: "Ты мне противен"
+
+# 90c134c2
+; @choice handler:ButtonArea button:MapButtons/MapButton pos:800,-450 goto:Map.Map

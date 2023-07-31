@@ -1,6 +1,7 @@
 # Map
 @hidePrinter
 @hideChars
+@hideUI QuestLog
 @back map
 
 @choice  button:MapButtons/btn1 pos:-300,-300 handler:ButtonArea goto:Loc1.Loc1

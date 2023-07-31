@@ -1,7 +1,0 @@
-@input PlayerName summary:"Enter your name"
-@stop
-{PlayerName}: you can call me {PlayerName}
-
-
-
-@stop

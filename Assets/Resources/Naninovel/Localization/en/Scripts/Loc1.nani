@@ -1,0 +1,40 @@
+; Russian <ru> to English <en> localization document for `Loc1` naninovel script
+
+# f1ec9123
+; @input PlayerName summary:"Выберите себе имя"
+
+# 11d39546
+; npc1: Привет, {playerName}! У нас срочное задание. Великий артефакт, который держит мир в равновесии, был украден злодеями. Ты можешь помочь нам его найти и вернуть?"
+
+# 7de7f2f9
+; {PlayerName}: Конечно, я сделаю всё возможное, чтобы найти этот артефакт и вернуть его!
+
+# 90c134c2
+; @choice handler:ButtonArea button:MapButtons/MapButton pos:800,-450 goto:Map.Map
+
+# 89673ff0
+; {PlayerName}: Я вернулся!
+
+# e22868b5
+; npc1: {playerName} ты нашёл артефакт?
+
+# f6c94b15
+; npc2: Эй, ты там! Покажи мне артефакт, который ты нашёл.
+
+# ed6fe24b
+; @choice "Отдать артефакт НПЦ-1" goto:.Choise1
+
+# d2464de3
+; @choice "Отдать артефакт НПЦ-2" goto:.Choise2
+
+# 8d71edb8
+; @choice "Оставить себе" goto:.Choise3
+
+# bd18fa4f
+; npc1: Ты мне нравишся
+
+# 13219c86
+; npc1: "Ты мне противен"
+
+# 90c134c2
+; @choice handler:ButtonArea button:MapButtons/MapButton pos:800,-450 goto:Map.Map

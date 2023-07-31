@@ -174,9 +174,6 @@ MonoBehaviour:
       guid: 08041c13a1f901947a6a67ba0cf2c658
   - Id: Scripts
     Resources:
-    - name: NameChoosing
-      pathPrefix: Scripts
-      guid: d9de1b07aed5d034ca88774135071bcb
     - name: Map
       pathPrefix: Scripts
       guid: f1c8d480a7ff30d49b0d1d14af99c269
@@ -196,7 +193,7 @@ MonoBehaviour:
     Resources:
     - name: bg1
       pathPrefix: Backgrounds/MainBackground
-      guid: 766a594eedaec8846a30a18e532ce193
+      guid: 3d94aeefffe23134ea26505943570d4e
     - name: bg2
       pathPrefix: Backgrounds/MainBackground
       guid: dc68765a7daf4034494c49612d6a704c

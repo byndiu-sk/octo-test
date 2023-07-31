@@ -1,0 +1,10 @@
+; Russian <ru> to English <en> localization document for `Loc3` naninovel script
+
+# d6792e89
+; @choice handler:ButtonArea button:ArtifactItem pos:0,0 goto:.ItemPickedUp
+
+# be7b8808
+; {PlayerName}: Я нашел артефакт. Круто!
+
+# 90c134c2
+; @choice handler:ButtonArea button:MapButtons/MapButton pos:800,-450 goto:Map.Map

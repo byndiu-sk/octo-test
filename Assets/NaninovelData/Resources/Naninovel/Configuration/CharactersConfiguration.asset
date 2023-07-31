@@ -137,7 +137,7 @@ MonoBehaviour:
         width: 1
         height: 1
       BakedLookDirection: 1
-      DisplayName: 
+      DisplayName: "\u041D\u0435\u043E"
       UseCharacterColor: 0
       NameColor: {r: 1, g: 1, b: 1, a: 1}
       MessageColor: {r: 1, g: 1, b: 1, a: 1}
@@ -179,7 +179,7 @@ MonoBehaviour:
         width: 1
         height: 1
       BakedLookDirection: 1
-      DisplayName: 
+      DisplayName: "\u041E\u043C\u0430\u0440"
       UseCharacterColor: 0
       NameColor: {r: 1, g: 1, b: 1, a: 1}
       MessageColor: {r: 1, g: 1, b: 1, a: 1}

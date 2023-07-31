@@ -1,5 +1,5 @@
 #Loc3
-
+@showUI QuestLog
 @back bg3
 @char player
 
@@ -10,8 +10,10 @@
 
 
 @set questProgress++
+@set targetLoc=2
 ;Quest progress equal to 3
-@set status=questProgress
+@set status="Вернуться в локацию 2"
 
-@choice handler:ButtonArea button:MapButtons/MapButton pos:0,0 goto:Map.Map
+@hidePrinter 
+@choice handler:ButtonArea button:MapButtons/MapButton pos:800,-450 goto:Map.Map
 @stop
